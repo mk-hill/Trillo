@@ -8,7 +8,8 @@
   --c-gry-lt-4: #ccc;
   --c-gry-dk-1: #333;
   --c-gry-dk-2: #777;
-  --c-gry-dk-3: #999; }
+  --c-gry-dk-3: #999;
+  --shadow-dk: 0 2rem 6rem rgba(0,0,0,.3); }
 
 * {
   margin: 0;
@@ -32,3 +33,26 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh; }
+
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--c-gry-lt-1);
+  box-shadow: var(--shadow-dk);
+  min-height: 50rem; }
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--c-gry-lt-2); }
+
+.content {
+  display: flex; }
+
+.sidebar {
+  background-color: var(--c-gry-dk-1);
+  flex: 0 0 18%; }
+
+.hotel-view {
+  background-color: #fff;
+  flex: 1; }

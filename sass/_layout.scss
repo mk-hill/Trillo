@@ -1,0 +1,32 @@
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--c-gry-lt-1);
+    box-shadow: var(--shadow-dk);
+    
+    min-height: 50rem;
+}
+
+.header {
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--c-gry-lt-2);
+
+}
+
+.content {
+    display: flex;
+}
+
+.sidebar {
+    background-color: var(--c-gry-dk-1);
+    // Using flex basis instead of width, no grow/shrink because % value should stay constant
+    flex: 0 0 18%;
+}
+
+.hotel-view {
+    background-color: #fff;
+    // occupy entire remaining space
+    flex: 1;
+
+}
