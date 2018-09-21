@@ -8,10 +8,15 @@
 }
 
 .header {
+    font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--c-gry-lt-2);
 
+    // Align all 3 subsections
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content {
@@ -20,13 +25,15 @@
 
 .sidebar {
     background-color: var(--c-gry-dk-1);
+    
     // Using flex basis instead of width, no grow/shrink because % value should stay constant
     flex: 0 0 18%;
 }
 
 .hotel-view {
     background-color: #fff;
-    // occupy entire remaining space
+    
+    // Occupy entire remaining space
     flex: 1;
 
 }
