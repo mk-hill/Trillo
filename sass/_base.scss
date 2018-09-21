@@ -1,0 +1,51 @@
+
+// Declaring CSS variables instead of SASS for greater flexibility later
+// Set to root element for availability in the entire document
+
+:root {
+
+    // COLORS
+    // Primary - base/light/dark
+    --c-prm: #eb2f64;
+    --c-prm-lt: #FF3366;
+    --c-prm-dk: #BA265D;
+
+    // Grey - lights/darks
+    --c-gry-lt-1: #faf9f9;
+    --c-gry-lt-2: #f4f2f2;
+    --c-gry-lt-3: #f0eeee;
+    --c-gry-lt-4: #ccc;
+
+    --c-gry-dk-1: #333;
+    --c-gry-dk-2: #777;
+    --c-gry-dk-3: #999;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+// Set 1rem to 10px and allow scaling for users who customize default font size
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--c-gry-dk-2);
+    background-image: linear-gradient(to right bottom, var(--c-prm-lt), var(--c-prm-dk));
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+}
