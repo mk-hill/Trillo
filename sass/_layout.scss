@@ -28,11 +28,19 @@
     
     // Using flex basis instead of width, no grow/shrink because % value should stay constant
     flex: 0 0 18%;
+
+    // Push menu to top and legal text to bottom regardless of screen size
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view {
     background-color: #fff;
     
+    //testing, remove later
+    height: 80rem;
+
     // Occupy entire remaining space
     flex: 1;
 
