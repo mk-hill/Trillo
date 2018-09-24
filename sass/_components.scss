@@ -287,6 +287,11 @@
             font-size: 1.8rem;
             padding: 1.25rem 2rem;
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 1.6rem;
+            padding: 1.25rem 1rem;
+        }
     }
 
     &__stars {
@@ -303,6 +308,11 @@
         width: 1.75rem;
         height: 1.75rem;
         fill: var(--color-primary);
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 
     &__location {
@@ -329,6 +339,11 @@
 
         @media only screen and (max-width: $bp-small) {
             padding: 0 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            margin-left: .5rem;
+            padding: 0 1rem;
         }
     }
 
@@ -444,16 +459,19 @@
         width: 1rem;
         margin-right: .7rem;
 
-        // Older browsers
-        // background-image: url(../img/chevron-thin-right.svg);
-        // background-size: cover;
+        // Older browsers - chevrons uncolored
+        background-image: url(../img/chevron-thin-right.svg);
+        background-size: cover;
 
-        // Newer browsers - masks
-        background-color: var(--color-primary);
-        -webkit-mask-image: url(../img/chevron-thin-right.svg);
-        -webkit-mask-size: cover;
-        mask-image: url(../img/chevron-thin-right.svg);
-        mask-size: cover;
+        // Newer browsers - mask
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+            background-color: var(--color-primary);
+            -webkit-mask-image: url(../img/chevron-thin-right.svg);
+            -webkit-mask-size: cover;
+            mask-image: url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+            background-image: none;
+        }
     }
 }
 
