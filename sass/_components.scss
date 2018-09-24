@@ -21,7 +21,7 @@
         font-family: inherit;
         font-size: inherit;
         color: inherit;
-        background-color: var(--color-gry-lt-2);
+        background-color: var(--color-grey-light-2);
         border: none;
         padding: .7rem 2rem;
         border-radius: 100px;
@@ -34,22 +34,22 @@
         &:focus {
             outline: none;
             width: 100%;
-            background-color: var(--color-gry-lt-3);
+            background-color: var(--color-grey-light-3);
         }
 
         &::-webkit-input-placeholder {
             font-weight: 100%;
-            color: var(--color-gry-lt-4);
+            color: var(--color-grey-light-4);
         }
     }
 
     &__input:focus + &__button {
-        background-color: var(--color-gry-lt-3);
+        background-color: var(--color-grey-light-3);
     }
 
     &__button {
         border: none;
-        background-color: var(--color-gry-lt-2);
+        background-color: var(--color-grey-light-2);
         outline: none;
 
         &:active {
@@ -62,7 +62,7 @@
         width: 2rem;
 
         // Set SVG color:
-        fill: var(--color-gry-dk-3);
+        fill: var(--color-grey-dark-3);
     }
 }
 
@@ -88,7 +88,7 @@
     }
 
     & > *:hover {
-        background-color: var(--color-gry-lt-2);
+        background-color: var(--color-grey-light-2);
     }
 
     &__icon-box {
@@ -98,7 +98,7 @@
     &__icon {
         height: 2.25rem;
         width: 2.25rem;
-        fill: var(--color-gry-dk-2);  
+        fill: var(--color-grey-dark-2);
     }
 
     &__notification {
@@ -172,7 +172,7 @@
 
     &__link:link,
     &__link:visited {
-        color: var(--color-gry-lt-1);
+        color: var(--color-grey-light-1);
         text-decoration: none;
         text-transform: uppercase;
         display: block;
@@ -199,7 +199,7 @@
 
 .legal {
     font-size: 1.2rem;
-    color: var(--color-gry-lt-4);
+    color: var(--color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
 }
@@ -299,7 +299,7 @@
     transition: all .2s;
 
     &:hover {
-        color: var(--color-gry-dk-1);
+        color: var(--color-grey-dark-1);
     }
 
     &:focus {

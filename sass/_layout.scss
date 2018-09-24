@@ -1,7 +1,7 @@
 .container {
     max-width: 120rem;
     margin: 8rem auto;
-    background-color: var(--color-gry-lt-1);
+    background-color: var(--color-grey-light-1);
     box-shadow: var(--shadow-dark);
     
     min-height: 50rem;
@@ -24,7 +24,7 @@
 }
 
 .sidebar {
-    background-color: var(--color-gry-dk-1);
+    background-color: var(--color-grey-dark-1);
     
     // Using flex basis instead of width, no grow/shrink because % value should stay constant
     flex: 0 0 18%;
@@ -37,11 +37,8 @@
 
 .hotel-view {
     background-color: #fff;
-    
-    //testing, remove later
-    height: 80rem;
 
-    // Occupy entire remaining space
+    // Occupy entire remaining space after sidebar
     flex: 1;
 
 }
@@ -49,15 +46,17 @@
 .detail {
     display: flex;
     padding: 4.5rem;
-    background-color: var(--color-gry-lt-1);
+    background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
 }
 
 .description {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
     flex: 0 0 60%;
     margin-right: 4.5rem;
-
-    background-color: red;
+    font-size: 1.4rem;
 }
 
 .user-reviews {
