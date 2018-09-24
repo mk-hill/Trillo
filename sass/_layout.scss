@@ -5,6 +5,16 @@
     box-shadow: var(--shadow-dark);
     
     min-height: 50rem;
+
+    // Remove top/bottom margin when side margins are naturally eliminated
+    // Change max-width to adjust to new rem definitions following bp
+    // Switch shadow to regular box equivalent once body background is gone
+    @media only screen and (max-width: $bp-larger) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+        box-shadow: var(--shadow-light);
+    }
 }
 
 .header {
@@ -17,10 +27,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    // Move order:1 search bar to a new row
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: 11rem;
+    }
 }
 
 .content {
     display: flex;
+
+    // Make sidebar top navbar after 900px
+    @media only screen and (max-width: $bp-med) {
+        flex-direction: column;
+    }
 }
 
 .sidebar {
@@ -40,7 +62,6 @@
 
     // Occupy entire remaining space after sidebar
     flex: 1;
-
 }
 
 .detail {
@@ -49,6 +70,16 @@
     padding: 4.5rem;
     background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
+
+    // Fix unnecessary padding for smaller screens
+    @media only screen and (max-width: $bp-med) {
+        padding: 3rem;
+    }
+
+    // Description and reviews no longer side by side after 600px
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
 }
 
 .description {
@@ -57,6 +88,16 @@
     padding: 3rem;
     flex: 0 0 60%;
     margin-right: 4.5rem;
+
+    @media only screen and (max-width: $bp-med) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 .user-reviews {
