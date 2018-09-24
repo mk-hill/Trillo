@@ -1,8 +1,8 @@
 .container {
     max-width: 120rem;
     margin: 8rem auto;
-    background-color: var(--c-gry-lt-1);
-    box-shadow: var(--shadow-dk);
+    background-color: var(--color-gry-lt-1);
+    box-shadow: var(--shadow-dark);
     
     min-height: 50rem;
 }
@@ -11,7 +11,7 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: 1px solid var(--c-gry-lt-2);
+    border-bottom: var(--line);
 
     // Align all 3 subsections
     display: flex;
@@ -24,7 +24,7 @@
 }
 
 .sidebar {
-    background-color: var(--c-gry-dk-1);
+    background-color: var(--color-gry-dk-1);
     
     // Using flex basis instead of width, no grow/shrink because % value should stay constant
     flex: 0 0 18%;
@@ -44,4 +44,23 @@
     // Occupy entire remaining space
     flex: 1;
 
+}
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-gry-lt-1);
+    border-bottom: var(--line);
+}
+
+.description {
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+
+    background-color: red;
+}
+
+.user-reviews {
+    background-color: green;
+    flex: 1;
 }
